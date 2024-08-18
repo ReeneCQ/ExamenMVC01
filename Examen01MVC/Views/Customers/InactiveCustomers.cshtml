@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Examen01MVC.Models.Customer>
+
+@{
+    ViewBag.Title = "InactiveCustomers";
+}
+
+<h2>InactiveCustomers</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DocumentNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DocumentType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocumentNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocumentType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+    </tr>
+}
+
+</table>
